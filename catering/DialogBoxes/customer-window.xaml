@@ -1,0 +1,32 @@
+﻿<Window x:Class="Wpf_Catering_Db_system.DialogBoxes.customer_window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Wpf_Catering_Db_system.DialogBoxes"
+        mc:Ignorable="d"
+        Title="customer_window" Height="300" Width="400" WindowStartupLocation="CenterScreen"
+        AllowsTransparency="True" WindowStyle="None" Background="Transparent">
+    <Border Background="white" CornerRadius="5">
+        <Grid>
+            <Grid Margin="10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Vertical">
+
+                    <TextBlock Text="Customer Name:" VerticalAlignment="Center"/>
+                    <TextBox x:Name="CustomerNameTextBox" Margin="5"/>
+                    <TextBlock Text="PhoneNo:" VerticalAlignment="Center"/>
+                    <TextBox x:Name="PhoneNoTextBox" Margin="5"/>
+                    <TextBlock Text="Email:" VerticalAlignment="Center"/>
+                    <TextBox x:Name="EmailTextBox" Margin="5"/>
+                    <TextBlock Text="Address: " VerticalAlignment="Center" />
+                    <TextBox x:Name="AddressTextBox" Margin="5"/>
+                </StackPanel>
+                <Button Grid.Row="1" x:Name="SubmitButton" Content="Insert" Margin="5" VerticalAlignment="Bottom" Height="auto" Click="Button_Click"/>
+            </Grid>
+        </Grid>
+    </Border>
+</Window>

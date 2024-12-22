@@ -1,0 +1,88 @@
+﻿<Page x:Class="Wpf_Catering_Db_system.Sections.Order_form"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Wpf_Catering_Db_system.Sections"
+      mc:Ignorable="d" 
+      d:DesignHeight="860" d:DesignWidth="690"
+      Title="Order_form">
+
+    <Border Background="#eff2f7">
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <StackPanel Orientation="Vertical">
+               <!-- <Button HorizontalAlignment="Right" Margin="0 70 20 2" Background="Transparent" Click="refreshButton_Click">
+                    <Icon:PackIconMaterial Kind="Refresh" />
+                </Button> -->
+                <TextBlock Margin="0 70 0 2" Text="Catering Order Form" FontSize="32" FontWeight="SemiBold"/>
+                <TextBlock Text="Create a new Catering Order" FontSize="12" Foreground="#808080" />
+            </StackPanel>
+
+            <StackPanel Grid.Row="1" Orientation="Vertical" >
+                <TextBlock Text="Select Customer" Margin="0 30 0 2"/>
+                <ComboBox x:Name="customersComboBox" Height="20" SelectionChanged="customersComboBox_SelectionChanged" 
+                          >
+                    <ComboBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal">
+                                <!-- the whole Customer obj as property doesnt bind for some reason -->
+                                <TextBlock Text="{Binding}" Foreground="Black" /> 
+                            </StackPanel>
+                        </DataTemplate>
+                    </ComboBox.ItemTemplate>
+                </ComboBox>
+
+                <TextBlock Text="Select Menu Items" Margin="0 15 0 2"/>
+                <Button Background="Transparent" BorderThickness="1" BorderBrush="Black" Content="Add Menu Items" Height="30" Padding="3" Click="AddMenuItemsButton_Click"/>
+
+                <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Visible" Height="280" Margin="0 20 0 0">
+                    
+                    <StackPanel x:Name="AddMenusPanel" Orientation="Vertical" Margin="0 15 0 0" />
+                    
+                </ScrollViewer>
+
+                <StackPanel x:Name="mainStackPanel"/>
+
+                <Button Style="{StaticResource addButton}" HorizontalAlignment="Center" Width="300" Margin="0" Click="SubmitOrderButton_Click">
+                    Submit Order
+                </Button>
+
+
+                <!-- <TextBlock Text="Total: Rs 1030" HorizontalAlignment="Right" Margin="0 5 10 0" FontSize="20"
+                           FontWeight="SemiBold" x:Name="TotalPrice" 
+                           />-->
+
+                <!-- sample Menus Dock Panel
+                    <DockPanel Background="#e6e6e6" Height="40" >
+                        <TextBlock DockPanel.Dock="Left" Text="  DISH NAME - " VerticalAlignment="Center"/>
+                        <TextBlock DockPanel.Dock="Left" Text="Price" VerticalAlignment="Center"/>
+
+                        <StackPanel DockPanel.Dock="Right" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0 5 10 5 ">
+                            <Button Width="20" HorizontalAlignment="Right" >
+                                +
+                            </Button >  
+                            <TextBlock Text=" 1 " VerticalAlignment="Center" HorizontalAlignment="Right"/>
+                            <Button Width="20" HorizontalAlignment="Right">
+                                -
+                            </Button>
+                            
+                        </StackPanel>
+                    </DockPanel> -->
+                
+                
+            </StackPanel>
+
+            
+            
+        </Grid>
+        
+        
+    </Border>
+</Page>

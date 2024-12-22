@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup />
+  <ItemGroup>
+    <ApplicationDefinition Update="App.xaml">
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="DialogBoxes\ConfirmDelete.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DialogBoxes\customer-window.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DialogBoxes\menu-window.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DialogBoxes\menuItems.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="DialogBoxes\orderStatus-window.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sections\Customers.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sections\Menus.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sections\Order-form.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sections\order-management.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sections\OrderDetails.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sections\Orders.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Sections\Transactions.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="DialogBoxes\ConfirmDelete.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DialogBoxes\customer-window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DialogBoxes\menu-window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="DialogBoxes\orderStatus-window.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Sections\Customers.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Sections\Menus.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Sections\Order-form.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Sections\order-management.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Sections\OrderDetails.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Sections\Orders.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Sections\Transactions.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+</Project>

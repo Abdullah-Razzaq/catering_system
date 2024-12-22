@@ -1,0 +1,48 @@
+﻿<Page x:Class="Wpf_Catering_Db_system.Sections.Transactions"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:Icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Wpf_Catering_Db_system.Sections"
+      mc:Ignorable="d" 
+      d:DesignHeight="860" d:DesignWidth="690"
+      Title="Transactions" Background="#eff2f7">
+
+    <Grid Focusable="False" >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="auto"/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Text="Transactions Ledger" FontSize="32" FontWeight="SemiBold" Margin="0 70 0 0"/>
+
+        <DataGrid Background="Transparent" Style="{DynamicResource DataGridStyle1}" CellStyle="{DynamicResource DataGridCellStyle1}" ColumnHeaderStyle="{DynamicResource DataGridColumnHeaderStyle1}" RowStyle="{DynamicResource DataGridRowStyle1}" Grid.Row="1" Margin="0 20 0 20" x:Name="TransactionsGrid" AutoGenerateColumns="False" CanUserAddRows="False">
+            <DataGrid.Columns>
+               
+                <DataGridTextColumn Header="#" Width="auto" CanUserResize="False" IsReadOnly="True" Binding="{ Binding LedgerID }" />
+                <DataGridTextColumn Header="OrderID" Width="*" CanUserResize="False" IsReadOnly="True" Binding="{ Binding OrderID }" />
+                <DataGridTextColumn Header="CustomerID" Width="*" CanUserResize="False" IsReadOnly="True" Binding="{ Binding CustomerID }"/>
+                <DataGridTextColumn Header="TransactionType" Width="*" CanUserResize="False" IsReadOnly="True" Binding="{ Binding TransactionType }"/>
+                <DataGridTextColumn Header="TransactionDate" Width="*" CanUserResize="False" IsReadOnly="True" Binding="{ Binding TransactionDate }"/>
+                <DataGridTextColumn Header="Amount" Width="*" CanUserResize="False" IsReadOnly="True" Binding="{ Binding Amount }"/>
+                <DataGridTextColumn Header="Notes" Width="*" CanUserResize="False" IsReadOnly="True" Binding="{ Binding Notes }"/>
+
+                <DataGridTemplateColumn Header="Operations" Width="auto" CanUserResize="False">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                                <Button Style="{ StaticResource gridEditButton}" Tag="{Binding ID}" >
+                                    <Icon:PackIconMaterial Kind="Eye" Style="{StaticResource gridButtonIcon}" />
+                                </Button>
+                            </StackPanel>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Page>
